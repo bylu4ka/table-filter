@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <form action="" id="add-form">
+        <label>
+            <span>Name</span>
+            <input type="text" name="name" required>
+        </label>
+        <label>
+            <span>Telegram</span>
+            <input type="text" name="telegram">
+        </label>
+        <label>
+            <span>Phone</span>
+            <input type="text" name="phone">
+        </label>
+        <label>
+            <span>Level</span>
+            <select name="level">
+                <option value="1">Beginner</option>
+                <option value="2">Intermediate</option>
+                <option value="3">Advanced</option>
+                <option value="4">Professional</option>
+            </select>
+        </label>
+        <button type="submit">Add</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <h1>Students</h1>
+
+    <form action="" id="view-form">
+        <label>
+            <span>search</span>
+            <input type="text" name="search">
+            <button class="clear" type="button">×</button>
+        </label>
+        <label>
+            <span>filter</span>
+            <select name="filter">
+                <option value="">All</option>
+                <option value="1">Beginner</option>
+                <option value="2">Intermediate</option>
+                <option value="3">Advanced</option>
+                <option value="4">Professional</option>
+                <option value="tg">Telegram</option>
+                <option value="no-tg">No Telegram</option>
+                <option value="phone">Phone</option>
+                <option value="no-phone">No Phone</option>
+            </select>
+        </label>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>telegram</th>
+                <th>phone</th>
+                <th>level</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+</html>
