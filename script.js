@@ -1,14 +1,9 @@
 const [addForm, viewForm] = document.forms;
 const tbody = document.querySelector('tbody');
-const levels = [, 'Beginner', 'Intermediate', 'Advanced', 'Professional']
+const levels = ['Beginner', 'Intermediate', 'Advanced', 'Professional']
 
 addForm.onsubmit = handleAdd;
 viewForm.oninput = viewForm.onchange = handleView;
-
-addStudent({ name: 'John Doe', telegram: '@johndoe', level: '2' });
-addStudent({ name: 'Alph', phone: '123', level: '4' });
-addStudent({ name: 'beta', telegram: '@beta', level: '1' });
-addStudent({ name: 'John Doeson', telegram: '@johndoeson', level: '3' });
 
 function handleAdd(e) {
     e.preventDefault();
@@ -59,3 +54,9 @@ function addStudent(student) {
     row.insertCell().append(student.phone || '')
     row.insertCell().append(levels[student.level])
 }
+// map - це стандартний наслідуваний метод масиву
+// що приймає колбек функцію , яку викликає стільки
+// разів , скільки елементів в масиві, передаючи в неї
+// кожен раз черговий елемент масиву , його індекс
+// і весь масив, отримує значення повернуте функцією,
+// збирає ці значення в новий масив і повертає його.
